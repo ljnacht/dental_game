@@ -1,0 +1,389 @@
+@font-face {
+    font-family: Encode Regular;
+    src: url(fonts/EncodeSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Encode Light;
+    src: url(fonts/EncodeSans-Light.ttf);
+}
+
+body{
+    background-image: url("images/bg.gif");
+    font-family: Verdana;
+    font-size: 12px;
+    padding:0px;
+    margin: 0px;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h1.home {
+    font-family: Arial;
+    font-weight: 100;
+    font-size: 18px;
+    color:#84c9ff;
+    margin-bottom: 20px;
+    line-height: 150%;
+}
+.home-btn {
+    background-color: #2da4ff;
+    margin-top: 20px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    display: block;
+    float: right;
+    clear: both;
+    width: 250px;
+    height: 70px;
+    color: white;
+    font-family: Arial;
+    font-size: 22px;
+    outline: none;
+}
+
+.gray{
+    background-color: #656565;
+    float: left;
+    border-color: #656565;
+}
+.home-btn:hover{
+  background-image: -moz-linear-gradient( -45deg, rgb( 45, 164, 255 ) 0%, rgb( 18, 102, 166 ) 98.535%);
+  background-image: -webkit-linear-gradient( -45deg, rgb( 45, 164, 255 ) 0%, rgb( 18, 102, 166 ) 98.535%);
+  left: 230px;
+  top: 674px;
+  z-index: 8;
+}
+.gray:hover,active {
+  background-image: -moz-linear-gradient( -45deg, rgb( 101, 101, 101 ) 0%, rgb( 67, 66, 66 ) 98.535%);
+  background-image: -webkit-linear-gradient( -45deg, rgb( 101, 101, 101 ) 0%, rgb( 67, 66, 66 ) 98.535%);
+  left: 230px;
+  top: 674px;
+  z-index: 8;
+}
+
+.navbar {
+    width:100%;
+    height:60px;
+    border-radius: 0px;
+    padding:10px 0px 60px 0px;
+    background-image: -moz-linear-gradient( 90deg, rgb( 18, 113, 186 ) 0%, rgb( 45, 164, 255 ) 41.675%);
+    background-image: -webkit-linear-gradient( 90deg, rgb( 18, 113, 186 ) 0%, rgb( 45, 164, 255 ) 41.675%);
+}
+
+.navmenu {
+    width: 80%;
+    display: block;
+    float: right;
+    padding-top: 20px;
+}
+
+.navlink{
+    color: white;
+    display: inline-block;
+    float: right;
+    margin: 0px 10px 0px 10px;
+    font-size: 12px;
+    font-family: Encode Regular;
+    font-weight: 100;
+    text-transform: uppercase;
+    background-color:transparent;
+    border: none;
+    text-align: center;
+}
+
+.navlink:hover {
+    color: #084778;
+}
+
+#play {
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid white;
+    margin-top: -10px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgba(255,255,255,0.0);
+    transition: background-color 0.5s ease;
+}
+
+#play:hover {
+  background-color: rgba(255,255,255,0.4);
+  color: white;
+}
+
+#logo-container {
+    width: 20%;
+    display: block;
+    float: left;
+}
+
+#logo-nav{
+    display: block;
+    float: left;
+}
+
+.practice-left{
+  float:left;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.practice-right{
+  float: right;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+h1 {
+    font-family: Encode Regular;
+    color:#913689;
+    line-height: 150%;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: Encode Light;
+    color:#84c9ff;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.rules-row {
+    padding-top: 15px;
+}
+
+.level-col {
+    color: white;
+    padding: 0px 30px 0px 30px;
+
+}
+
+#formContainer{
+    width: 900px;
+    text-align: center;
+}
+
+.controlButton{
+    background-color: #7F7F7F;
+    border: 1px solid #000000;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+#col2Container{
+    position: fixed;
+    top: 8em;
+    right: 1em;
+    z-index: 1;
+    opacity: 0.5;
+    border: 0px;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: #7F7F7F;
+}
+
+
+
+#pageHeader{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.dataList{
+    width: 100%;
+    border-collapse:collapse;
+}
+
+.dataList tr td{
+    border: 1px solid #000;
+    text-align: left;
+    padding: 5px;
+}
+
+
+.dataList a{
+    color: #0000ff;
+}
+
+.dataList a:hover{
+    color: #ff0000;
+}
+
+.tableHeader{
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.linkButton{
+	border: 1px solid #000000;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.longText{
+	width: 500px;
+}
+
+.shortText{
+	width: 50px;
+}
+
+.notesText{
+	width: 500px;
+	height: 150px;
+}
+
+.formTable{
+	border-collapse:collapse;
+}
+
+.formTable td{
+	border: 1px solid #c0c0c0;
+    text-align: left;
+    vertical-align: top;
+    padding: 15px;
+}
+
+#topMenu{
+	width: 100%;
+	background-color: #dedede;
+	padding-top:15px;
+	padding-bottom: 15px;
+}
+
+#topMenu a{
+	padding-right: 20px;
+	padding-left: 20px;
+	border-right: solid 1px #000;
+}
+
+#loginForm{
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #000000;
+	padding: 20px;
+}
+
+#loginForm input{
+	width: 200px;
+}
+
+#loginForm td{
+	padding: 10px;
+}
+
+/*html, body {
+	display: block;
+	min-height: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: sans-serif;
+}*/
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.instructions{
+  list-style: square !important;
+  font-size: 14px;
+  line-height: 130% !important;
+}
+
+.footer{
+
+  margin-top: 3%;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  bottom: 0;
+  background-image: -moz-linear-gradient( 90deg, rgb( 45, 164, 255 ) 0%, rgb( 18, 113, 186 ) 41.675%);
+  background-image: -webkit-linear-gradient( 90deg, rgb( 45, 164, 255 ) 0%, rgb( 18, 113, 186 ) 41.675%);
+}
+
+@media (max-width: 767px) {
+
+    .home-btn {
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        width: 250px;
+        height: 50px;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    #logo {
+        width: 200px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    h1.home {
+        width:250px;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1{}
+
+    .mobile-navbar{
+        background-color: #2da4ff;
+        width: 100%;
+        height: 45px;
+    }
+
+    .col-xs-12{
+      padding:0px;
+    }
+
+    #mobile-logo-nav{
+        width: 50px;
+        margin: 7px 0px 0px 50px;
+    }
+
+    .mobile-logo-container {
+        width: 40%;
+        display: inline-block;
+        float: left;
+    }
+
+    .mobile-navmenu {
+    }
+
+    .menu-icon{
+        display: inline-block;
+        background: none;
+        border: none;
+        width:50px;
+
+    }
+
+    h3{
+      margin-top: 40px;
+      width: 100%;
+    }
+
+    form{
+      margin: 0px;
+      width: 100%;
+    }
+
+}

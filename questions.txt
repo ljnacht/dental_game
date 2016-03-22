@@ -1,0 +1,13 @@
+*** PRACTICE ****
+- lets begin doesnt work
+
+
+*** LEVELS ***
+- BG COLOR ON SIDEBAR
+- select doesnt work
+- get scores working
+
+*** LEVEL 2 ***
+- disease name doesnt show up
+- toggle overlay of img when selected/deselected
+- should there be a submit button?

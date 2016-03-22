@@ -1,0 +1,146 @@
+body {
+    padding: 10px;
+    font-family: sans-serif;
+}
+h1, h2 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 30px 0 5px 0;
+    padding: 0;
+    line-height: 1em;
+}
+h1 {
+    font-size:20px;
+    margin-top:0;
+}
+
+label {
+    padding:0.4em 2em 0.4em 0;
+}
+.toggle-btn-grp {
+    margin:3px 0;
+}
+.toggle-btn {
+    text-align:centre;
+    padding:3em;
+    color:#000;
+    background-color:#FFF;
+    border-radius:10px;
+    display:inline-block;
+    border:solid 1px #CCC;
+    cursor:pointer;
+}
+
+.right-align{
+  float: right;
+}
+
+.count{
+  width: 30%;
+}
+
+.toggle-btn:hover {
+    border:solid 1px #a0d5dc !important;
+    background:#f1fdfe;
+}
+
+
+.toggle-btn.success {
+    background:#BAE1F7;
+    border:solid 1px #1995dc!important;
+}
+
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+/* CSS only version */
+.toggle-btn-grp.cssonly * {
+    width:240px;
+    height:40px;
+    line-height:15px;
+}
+
+.radioCount{
+  display: inline-block;
+  width: 30px;
+}
+
+.toggle-btn-grp.cssonly div {
+    display:inline-block;
+    position:center;
+    margin:5px 2px;
+}
+
+.toggle-btn-grp.cssonly div label {
+    z-index:0;
+    padding: 10px 0px 0px 0px;
+    text-align:center;
+}
+
+.toggle-btn-grp.cssonly div input {
+    position:absolute;
+    z-index:1;
+    cursor:pointer;
+	text-align:center;
+    opacity:0;
+}
+
+.toggle-btn-grp.cssonly div:hover label {
+    border:solid 1px #a0d5dc !important;
+    background:#84c9ff;
+}
+
+.toggle-btn-grp.cssonly div input:checked + label {
+    background:#84c9ff;
+    border:solid 1px #1995dc!important;
+    color: #084778;
+}
+
+input[type=submit] {
+	  font-weight: bold;
+    font-size: 16px;
+	  width:150px;
+    height: 50px;
+    padding:5px 15px;
+    background:none;
+    border: solid white 2px;
+    color: white;
+    font-family: Verdana;
+    cursor:pointer;
+    background-color: rgba(255,255,255,0.0);
+    transition: background-color 0.5s ease;
+}
+
+input[type=submit]:hover{
+  background-color: rgba(255,255,255,0.4);
+  color: white;
+}
+
+.submit{
+	padding: 30px;
+}
+
+@media (max-width: 767px) {
+  .toggle-btn-grp.cssonly{
+    text-align: center;
+    float: none;
+  }
+}
