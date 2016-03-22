@@ -11,3 +11,4 @@
 - disease name doesnt show up
 - toggle overlay of img when selected/deselected
 - should there be a submit button?
+- should there be a hint button?

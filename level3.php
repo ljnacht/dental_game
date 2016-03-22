@@ -151,66 +151,92 @@ if (isset($_GET["debug"])) {
 
 </script>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="question-box level3">
+          <h1 class="level-num">Level 3: Matching Game</h1>
+          <h3>Please select the images and match it to the corresponding diagnoses.
+          </br></br>Please choose the diagnosis then the correct image. </h3>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <div class="scores-parent level3">
+          <div class="scores-child dark"> # Levels Attempts: {num}</div>
+          <div class="scores-child"> Questions Completed: {num}</div>
+          <div class="scores-child dark"> Number Correct: {num}</div>
+          <div class="scores-child"> Your Score: {num}</div>
+        </div>
+    </div>
+  </div><!--end questions -->
 
-<h1>Level 3: Matching Game!</h1>
-<h5>Please select the images and match it to the corresponding diagnoses.</h5>
-<h5>Please choose the diagnosis then the correct image. </h5>
+  <div  class="row">
+    <div class="col-md-2">
+      <?php
+      $questionList = array();
+      for ($i = 0; $i < 6; $i++) {
+          $question = new Question($_SESSION["gameAttemptID"], 3, 1, 0);
+          array_push($questionList, $question);
+      }
 
-<br>
+      // array_splice($imageList, 6);
 
+      shuffle($questionList);
+
+
+      echo("<table id='btnTable'><tbody>");
+
+      for ($i = 0; $i < count($questionList); $i++) {
+          $q = $questionList[$i]; //->getImageList()[];
+          $imgList = $q->getImageList();
+          echo("<input type='button'" . "id='" . $q->getQuestionID() . "_" . $imgList[0]->getImageID() . "' class='btnTable'" . "value='" . $imgList[0]->getAssociatedDiagnosis() . "' onclick='selectDiagnosisMatch(this);'/>");
+      }
+
+      echo("</tbody></table>");
+      echo("<br>");
+      echo("<br>");
+      ?>
+    </div><!--end terms -->
+
+    <div class="col-md-10">
+      <?php
+      shuffle($questionList);
+      for ($i = 0; $i < count($questionList); $i++) {
+          $q = $questionList[$i]; //->getImageList()[];
+          if (isset($q)) {
+              $imgList = $q->getImageList();
+              if (isset($imgList)) {
+                  echo("<div id='div" . $imgList[0]->getImageID() . "' class='imageContainer'>");
+
+                  echo("<p><input type='button' id='btn" . $q->getQuestionID() . "_" . $imgList[0]->getImageID() . "' value='SELECT' class='imageSelector' onclick='selectImageMatch(this)'/>");
+
+                  //echo("<input type='button' id='btnPreview" . $imgList[0]->getImageID() . "' value='ZOOM IN' class='imageViewer' onclick='showImagePreview(\"" . $imgList[0]->getImageFullPath() . "\")'; /></p>");
+
+                  echo("<img class='intense' src='" . str_replace("'", "&#39;", $imgList[0]->getThumbnailFullPath()) . "' height='250' id='img" . $imgList[0]->getImageID() . "' />");
+                  if (isset($_SESSION["debug"])) {
+                      echo("<br />" . $imgList[0]->getAssociatedDiagnosis() . "<br />");
+                  }
+
+                  echo("</div>");
+              }
+          }
+      }
+      echo("<div id='dialog-confirm' title='Important'><p><span class='ui-icon ui-icon-alert' style='visibility: hidden; float:left; margin:0 7px 20px 0;'></span></p></div>");
+      ?>
+    </div><!--end imgs -->
+  </div><!--end answers -->
+</div><!--end container -->
+
+
+
+<!------------------------------------------------
 <div class="termlist">
-    <?php
-    $questionList = array();
-    for ($i = 0; $i < 6; $i++) {
-        $question = new Question($_SESSION["gameAttemptID"], 3, 1, 0);
-        array_push($questionList, $question);
-    }
 
-    // array_splice($imageList, 6);
-
-    shuffle($questionList);
-
-
-    echo("<table id='btnTable'><tbody>");
-
-    for ($i = 0; $i < count($questionList); $i++) {
-        $q = $questionList[$i]; //->getImageList()[];
-        $imgList = $q->getImageList();
-        echo("<input type='button'" . "id='" . $q->getQuestionID() . "_" . $imgList[0]->getImageID() . "' class='btnTable'" . "value='" . $imgList[0]->getAssociatedDiagnosis() . "' onclick='selectDiagnosisMatch(this);'/>");
-    }
-
-    echo("</tbody></table>");
-    echo("<br>");
-    echo("<br>");
-    ?>
 </div>
 
 <div class="scroll">
     <div class="innerscroll">
-        <?php
-        shuffle($questionList);
-        for ($i = 0; $i < count($questionList); $i++) {
-            $q = $questionList[$i]; //->getImageList()[];
-            if (isset($q)) {
-                $imgList = $q->getImageList();
-                if (isset($imgList)) {
-                    echo("<div id='div" . $imgList[0]->getImageID() . "' class='imageContainer'>");
 
-                    echo("<p><input type='button' id='btn" . $q->getQuestionID() . "_" . $imgList[0]->getImageID() . "' value='SELECT' class='imageSelector' onclick='selectImageMatch(this)'/>");
-
-                    //echo("<input type='button' id='btnPreview" . $imgList[0]->getImageID() . "' value='ZOOM IN' class='imageViewer' onclick='showImagePreview(\"" . $imgList[0]->getImageFullPath() . "\")'; /></p>");
-
-                    echo("<img class='intense' src='" . str_replace("'", "&#39;", $imgList[0]->getThumbnailFullPath()) . "' height='250' id='img" . $imgList[0]->getImageID() . "' />");
-                    if (isset($_SESSION["debug"])) {
-                        echo("<br />" . $imgList[0]->getAssociatedDiagnosis() . "<br />");
-                    }
-
-                    echo("</div>");
-                }
-            }
-        }
-        echo("<div id='dialog-confirm' title='Important'><p><span class='ui-icon ui-icon-alert' style='visibility: hidden; float:left; margin:0 7px 20px 0;'></span></p></div>");
-        ?>
     </div>
 </div>
 
@@ -218,6 +244,8 @@ if (isset($_GET["debug"])) {
 
 <div id="overlay" title="Image" class="overlay">
 </div>
+--------------------------------------->
+
 
 <script language="javascript" type="text/javascript">
     // imageList = <?php echo($question->toJSON()); ?>;

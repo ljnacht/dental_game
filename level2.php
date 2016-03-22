@@ -120,21 +120,24 @@ if (isset($_GET["debug"])) {
 
 <div class="container">
   <div class="questions-div">
-    <h3>
+    <div class="question-box" style="margin-top: 59px;">
+      <h1 class="level-num"> Level 2: Select </h1>
+      <h3>
         <?php
         $maxCorrect = rand(2, 4);
         $numOfDistractors = (6 - $maxCorrect);
 
         $question = new Question($_SESSION["gameAttemptID"], 2, $maxCorrect, $numOfDistractors);
-        echo("Click all the images that show</br> <h3 class='disease>'" . $question->getDiagnosisName() ."</h3>");
+        echo("Click all the images that show</br> <h3 class='disease'>" . $question->getDiagnosisName() ."?</h3>");
         ?>
-    </h3>
+      </h3>
+    </div>
 
     <div class="scores-parent">
-      <div class="scores-child dark-pink"> # Levels Attempts: {num}</div>
-      <div class="scores-child light-pink"> Questions Completed: {num}</div>
-      <div class="scores-child dark-pink"> Number Correct: {num}</div>
-      <div class="scores-child light-pink"> Your Score: {num}</div>
+      <div class="scores-child dark"> # Levels Attempts: {num}</div>
+      <div class="scores-child"> Questions Completed: {num}</div>
+      <div class="scores-child dark"> Number Correct: {num}</div>
+      <div class="scores-child"> Your Score: {num}</div>
     </div>
   </div><!--end questions -->
 

@@ -12,7 +12,7 @@ body {
  	margin-bottom: 5px;
    	}
 
-/* LEVEL 1*/
+/* LEVELS PAGE*/
 .questions-div{
   width: 35%;
   float: left;
@@ -20,9 +20,78 @@ body {
 
 }
 
+.question-box{
+  width: 80%;
+  padding: 20px;
+  margin: 44px auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.level3{
+  margin:2% auto !important;
+}
+
+.rules{
+  width: 100%;
+  margin:0px;
+  min-height: 350px;
+}
+
 .answers-div{
   width:65%;
   float:left;
+}
+
+.scores-parent{
+  width: 80%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  margin:25% auto;
+  overflow: hidden;
+}
+
+.scores-child{
+  width: 100%;
+  color: black;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.dark{
+  background-color: rgba(255, 255, 255, 0.57);
+}
+.hint{
+	text-align:center;
+	}
+
+.hintBtn{
+    width: 30%;
+    border: 1px #84c9ff solid;
+    background-color: #89057E;
+    border-color: #89057E;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.5s ease;
+    outline: none;
+}
+
+.hintBtn:hover{
+  background-color: #84c9ff;
+  border-color: #84c9ff;
+}
+
+.terms-div{
+  width: 100%;
+  margin-bottom: 25px;
+  padding-top: 50px;
+}
+
+.imgs-div{
+  width:100%;
 }
 
 /* Headings */
@@ -51,6 +120,7 @@ h2 {
       color: white;
       font-size: 16px;
       text-align: center;
+      line-height: 120%;
   }
 
   h3.disease{
@@ -80,57 +150,12 @@ p {
 	margin-bottom: 15px;
 	}
 
-.scores-parent{
-  width: 60%;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  margin:25% auto;
-  overflow: hidden;
-}
-
-.scores-child{
-  width: 100%;
-  color: white;
-  padding: 15px;
-}
-
-.dark-pink{
-  background-color: #19405F;
-}
-
-.light-pink{
-  background-color:  #6EA6D1;
-}
-
-
 .counter{
 	position: relative;
 	text-align:center;
 	font-size: 20px;
 	}
 
-.hint{
-	text-align:center;
-	}
-
-.hintBtn{
-    width: 20%;
-    border: 1px #84c9ff solid;
-    background-color: #89057E;
-    border-color: #89057E;
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px 0px;
-    color: white;
-    font-size: 16px;
-    transition: all 0.5s ease;
-    outline: none;
-}
-
-.hintBtn:hover{
-  background-color: #84c9ff;
-  border-color: #84c9ff;
-}
 
 .center {
 	text-align: center;

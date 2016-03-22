@@ -105,26 +105,28 @@ $db = new DbUtilities;
 ?>
 <div class="container">
   <div class="questions-div">
-    <h1 class="level-num"> Level 1: Multiple Choice </h1>
-    <h3>
-        <!--
-        The following php code brings up the different questions and hints tied to each question.
-        -->
-        <?php
-        $question = new Question($_SESSION["gameAttemptID"], 1);
-        echo("Which of these images represents: </br> <h3 class='disease'>" . $question->getDiagnosisName() . "?<br /> </h3>");
-        $hint = ("Hint: " . $question->getHint() . "");
-        ?>
-    </h3>
-    <div class = "hint">
-        <button type="button" class="hintBtn" data-toggle="tooltip" data-placement="top" title=  "<?php echo htmlspecialchars($hint); ?>"; data-original-title="Tooltip on top">HINT</button>
+    <div class="question-box">
+      <h1 class="level-num"> Level 1: Multiple Choice </h1>
+      <h3>
+          <!--
+          The following php code brings up the different questions and hints tied to each question.
+          -->
+          <?php
+          $question = new Question($_SESSION["gameAttemptID"], 1);
+          echo("Which of these images represents: </br> <h3 class='disease'>" . $question->getDiagnosisName() . "?<br /> </h3>");
+          $hint = ("Hint: " . $question->getHint() . "");
+          ?>
+      </h3>
+      <div class = "hint">
+          <button type="button" class="hintBtn" data-toggle="tooltip" data-placement="top" title=  "<?php echo htmlspecialchars($hint); ?>"; data-original-title="Tooltip on top">HINT</button>
+      </div>
     </div>
 
     <div class="scores-parent">
-      <div class="scores-child dark-pink"> # Levels Attempts: {num}</div>
-      <div class="scores-child light-pink"> Questions Completed: {num}</div>
-      <div class="scores-child dark-pink"> Number Correct: {num}</div>
-      <div class="scores-child light-pink"> Your Score: {num}</div>
+      <div class="scores-child dark"> # Levels Attempts: {num}</div>
+      <div class="scores-child"> Questions Completed: {num}</div>
+      <div class="scores-child dark"> Number Correct: {num}</div>
+      <div class="scores-child"> Your Score: {num}</div>
     </div>
   </div><!--end questions -->
 
